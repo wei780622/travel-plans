@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>峴港一日行程｜9/25（五）龍蝦吃到飽之日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10222e;
+  --sea:#0e6f7c;
+  --sea-deep:#0a3a44;
+  --lobster:#e4572e;
+  --sand:#f6efe3;
+  --gold:#f2b25c;
+  --night:#131c33;
+  --white:#fdfcf9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans TC',sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg,
+    #bfe3e8 0%,
+    #e9f4ee 12%,
+    #f6efe3 30%,
+    #f8e3c8 50%,
+    #f3c08b 60%,
+    #b06a55 70%,
+    #3f3a5c 82%,
+    #131c33 100%);
+  line-height:1.75;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* ---------- Hero ---------- */
+header{padding:64px 0 40px;text-align:center}
+.eyebrow{
+  display:inline-block;letter-spacing:.35em;font-size:12px;font-weight:700;
+  color:var(--sea-deep);text-transform:uppercase;margin-bottom:14px;
+}
+h1{
+  font-family:'Noto Serif TC',serif;font-weight:900;
+  font-size:clamp(34px,6vw,56px);line-height:1.25;color:var(--sea-deep);
+}
+h1 .accent{color:var(--lobster)}
+.sub{margin-top:14px;font-size:15px;color:#3c5560}
+.badges{margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.badge{
+  background:rgba(255,255,255,.75);border:1px solid rgba(14,111,124,.25);
+  border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;color:var(--sea-deep);
+  backdrop-filter:blur(4px);
+}
+
+/* ---------- Sun / Moon dial ---------- */
+.dial{
+  margin:8px auto 0;width:120px;height:60px;position:relative;overflow:hidden;
+}
+.dial::before{
+  content:'';position:absolute;inset:0 0 -60px 0;border-radius:50%;
+  border:2px dashed rgba(14,111,124,.4);
+}
+.dial .sun{
+  position:absolute;left:8px;bottom:2px;width:18px;height:18px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 18px rgba(242,178,92,.9);
+  animation:arc 9s linear infinite;
+}
+@keyframes arc{
+  0%{left:6px;bottom:0;background:var(--gold)}
+  50%{left:51px;bottom:38px;background:var(--gold)}
+  100%{left:96px;bottom:0;background:var(--lobster)}
+}
+@media (prefers-reduced-motion:reduce){.dial .sun{animation:none;left:51px;bottom:38px}}
+
+/* ---------- Timeline ---------- */
+.timeline{position:relative;padding:36px 0 24px}
+.timeline::before{
+  content:'';position:absolute;top:0;bottom:0;left:26px;width:3px;
+  background:linear-gradient(180deg,var(--sea) 0%,var(--gold) 42%,var(--lobster) 60%,#6d7bb0 100%);
+  border-radius:3px;
+}
+.stop{position:relative;padding:0 0 34px 72px}
+.stop:last-child{padding-bottom:8px}
+.stop .dot{
+  position:absolute;left:13px;top:6px;width:29px;height:29px;border-radius:50%;
+  background:var(--white);border:3px solid var(--sea);
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+.stop.evening .dot{border-color:var(--lobster)}
+.stop.night .dot{border-color:#8a96c8}
+.time{
+  font-family:'Noto Serif TC',serif;font-weight:700;font-size:14px;letter-spacing:.12em;
+  color:var(--sea-deep);margin-bottom:6px;
+}
+.stop.night .time,.stop.night .move{color:#cdd6f4}
+.card{
+  background:rgba(255,255,255,.88);border-radius:18px;padding:22px 24px;
+  box-shadow:0 6px 24px rgba(16,34,46,.08);border:1px solid rgba(14,111,124,.12);
+  backdrop-filter:blur(6px);
+}
+.stop.night .card{background:rgba(24,32,56,.88);border-color:rgba(138,150,200,.3);color:#e8ecfa}
+.card h2{
+  font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--sea-deep);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.stop.night .card h2{color:#f4d9a6}
+.tag{
+  font-family:'Noto Sans TC',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;
+  background:var(--sea);color:#fff;border-radius:6px;padding:3px 9px;
+}
+.stop.evening .tag{background:var(--lobster)}
+.stop.night .tag{background:#5a68a0}
+.rating{font-size:13px;color:#7a6a3d;font-weight:500;margin-top:2px}
+.stop.night .rating{color:#e3c98e}
+.card p{margin-top:10px;font-size:14.5px}
+.card ul{margin:10px 0 0 2px;list-style:none}
+.card li{font-size:14.5px;padding-left:22px;position:relative;margin-top:6px}
+.card li::before{content:'—';position:absolute;left:0;color:var(--lobster);font-weight:700}
+.stop.night .card li::before{color:#f2b25c}
+.links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-block;font-size:13px;font-weight:700;text-decoration:none;
+  padding:7px 16px;border-radius:999px;border:1.5px solid var(--sea);color:var(--sea-deep);
+  transition:background .2s,color .2s;
+}
+.btn:hover{background:var(--sea);color:#fff}
+.btn.hot{border-color:var(--lobster);color:var(--lobster)}
+.btn.hot:hover{background:var(--lobster);color:#fff}
+.stop.night .btn{border-color:#8a96c8;color:#cdd6f4}
+.stop.night .btn:hover{background:#8a96c8;color:var(--night)}
+.move{
+  font-size:12.5px;color:#4a6672;margin-top:12px;letter-spacing:.05em;
+}
+.move::before{content:'🚕 ';font-size:12px}
+
+/* ---------- Lobster menu ---------- */
+.menu{
+  margin-top:14px;border-top:1px dashed rgba(228,87,46,.5);padding-top:12px;
+  display:grid;grid-template-columns:1fr auto;gap:4px 16px;font-size:14px;
+}
+.menu .price{font-weight:700;color:var(--lobster);white-space:nowrap}
+
+/* ---------- Info panels ---------- */
+.panel{
+  background:rgba(19,28,51,.92);color:#e8ecfa;border-radius:20px;
+  padding:28px 28px;margin:28px 0;border:1px solid rgba(138,150,200,.3);
+}
+.panel h3{
+  font-family:'Noto Serif TC',serif;font-size:19px;color:#f4d9a6;margin-bottom:12px;
+}
+.panel table{width:100%;border-collapse:collapse;font-size:14px}
+.panel td{padding:7px 4px;border-bottom:1px solid rgba(138,150,200,.2);vertical-align:top}
+.panel td:last-child{text-align:right;white-space:nowrap;color:#f2b25c;font-weight:700}
+.panel .note{font-size:12.5px;color:#aab4d8;margin-top:12px}
+
+footer{
+  text-align:center;padding:20px 0 48px;color:#8a96c8;font-size:12.5px;letter-spacing:.1em;
+}
+footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
+
+@media (max-width:560px){
+  .timeline::before{left:18px}
+  .stop{padding-left:56px}
+  .stop .dot{left:5px;width:27px;height:27px}
+  .card{padding:18px 18px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Đà Nẵng · 2026.09.25 · Friday</div>
+  <h1>峴港一日行程<br><span class="accent">龍蝦吃到飽</span>之日</h1>
+  <div class="dial" aria-hidden="true"><div class="sun"></div></div>
+  <p class="sub">飯店早餐吃飽 → 10:30 出門｜全天冷氣友善・韓江遊船看噴火秀零折返</p>
+  <div class="badges">
+    <span class="badge">🛍️ 購物掃貨</span>
+    <span class="badge">💆 越式洗頭＋按摩</span>
+    <span class="badge">🦞 龍蝦無限</span>
+    <span class="badge">🚢 韓江遊船</span>
+    <span class="badge">🐉 船上看噴火秀</span>
+    <span class="badge">🎶 沙灘酒吧</span>
+  </div>
+</header>
+
+<section class="timeline">
+
+  <!-- Vincom -->
+  <div class="stop">
+    <div class="dot">🛍️</div>
+    <div class="time">11:00 – 13:15</div>
+    <div class="card">
+      <h2>Vincom Plaza <span class="tag">午餐＋購物</span></h2>
+      <div class="rating">★ 4.2（1.4萬+ 評價）｜10:00–22:00</div>
+      <p>頂樓美食街解決午餐，WinMart 超市掃伴手禮：G7咖啡、腰果、椰子糖、零食通通有，比機場便宜一大截。還有 H&amp;M、Nike、Adidas 可以逛，全程冷氣超舒服。少了下個趕場行程，可以慢慢逛到 13:15。</p>
+      <ul>
+        <li>伴手禮先買放車上或請飯店寄放，晚上行程就不用提著跑</li>
+        <li>WinMart 在2樓，美食街在頂樓，由上往下逛最順</li>
+      </ul>
+      <div class="links"><a class="btn" href="https://maps.google.com/?cid=7818750409929595867" target="_blank">Google 地圖</a></div>
+      <div class="move">下一站車程約 8 分鐘</div>
+    </div>
+  </div>
+
+  <!-- Spa -->
+  <div class="stop">
+    <div class="dot">💆</div>
+    <div class="time">13:45 – 16:30</div>
+    <div class="card">
+      <h2>Golden Lotus Oriental Organic Spa <span class="tag">下午主場</span></h2>
+      <div class="rating">★ 4.9（1.3萬+ 評價）｜Hà Bổng 63號4樓｜10:00–23:00</div>
+      <p>拿掉趕場行程後，下午整段獻給 Spa——直接上完整套：<strong>越式洗頭（含頭皮深層清潔、肩頸按摩、採耳、臉部護理）＋ 全身草本油壓 90 分鐘</strong>，加上前後茶點、沖澡、水果盤，慢慢享受約 2.5 小時，把中午最熱的時段全部躲掉。</p>
+      <ul>
+        <li>務必先預約 13:45：+84 236 6559 090（電話 / WhatsApp）</li>
+        <li>只想做洗頭套餐（60分、約250k+VAT）也行，多出的時間去美溪沙灘散步踩水</li>
+        <li>備選：Lite Retreat Spa（24h）、Queen Spa（竹筒按摩）、Luxury Herbal Spa（四手按摩）</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="https://maps.google.com/?cid=12351819386961418536" target="_blank">Google 地圖</a>
+        <a class="btn" href="https://gloospa.com/booked-appointments/" target="_blank">線上預約</a>
+      </div>
+      <div class="move">按完先回飯店放戰利品、換晚上的衣服，再出發吃晚餐（各約 5–10 分鐘）</div>
+    </div>
+  </div>
+
+  <!-- Dinner -->
+  <div class="stop evening">
+    <div class="dot">🦞</div>
+    <div class="time">17:30 – 19:30</div>
+    <div class="card">
+      <h2>All Seasons Buffet <span class="tag">本日主秀</span></h2>
+      <div class="rating">★ 4.9（5,200+ 評價）｜193 Nguyễn Văn Thoại｜晚餐 17:00–22:00</div>
+      <p>峴港第一家龍蝦吃到飽，60+ 道料理現點現做、桌邊服務。<strong>一入座直接點滿三種口味龍蝦</strong>：奶油焗烤、蒜味、會安辣椒醬，服務人員還會幫忙剝殼。19:30 準時收尾，晚上還有遊船行程！</p>
+      <div class="menu">
+        <span>龍蝦無限續點＋海鮮單點吃到飽</span><span class="price">1,550k</span>
+        <span>龍蝦一隻＋海鮮吃到飽</span><span class="price">1,050k</span>
+        <span>龍蝦半隻＋海鮮吃到飽</span><span class="price">850k</span>
+      </div>
+      <ul>
+        <li>自行訂位稅費另計約13%；KKday / Klook 先買券通常已含稅費更划算</li>
+        <li>務必提前訂位 17:30：+84 764 068 111（電話 / WhatsApp）</li>
+        <li>蘑菇濃湯、英式海鮮烤牛肉組合是隱藏必點</li>
+        <li>吃到飽策略：龍蝦先上、主食甜點最後，19:15 開始收心準備出發</li>
+      </ul>
+      <div class="links">
+        <a class="btn hot" href="https://maps.google.com/?cid=9979023555170342361" target="_blank">Google 地圖</a>
+        <a class="btn hot" href="https://www.allseasonsbuffet.com/" target="_blank">官方網站</a>
+      </div>
+      <div class="move">19:40 搭 Grab 過橋到韓江碼頭，車程約 10 分鐘</div>
+    </div>
+  </div>
+
+  <!-- Cruise -->
+  <div class="stop night">
+    <div class="dot">🚢</div>
+    <div class="time">20:00 報到｜20:15 – 21:15 出航</div>
+    <div class="card">
+      <h2>My Xuan 韓江夜遊船 <span class="tag">船上看噴火秀</span></h2>
+      <div class="rating">★ 4.5（Klook 2,800+ 評價）｜航程 45 分鐘｜NT$90 起</div>
+      <p>飯後甜點是整條韓江的夜景。訂 <strong>20:15 船班</strong>，沿途看愛情橋心形燈飾、鯉魚化龍雕像、太陽摩天輪燈光，船上有音樂表演、附水果和水——最重要的是 <strong>21:00 龍橋噴火噴水秀直接在船上看</strong>，視野最好、不用人擠人卡位、也不會被水噴到。</p>
+      <ul>
+        <li>Klook 預訂「美軒遊船船票」，可加購無限暢飲（汽水＋啤酒）配夜景</li>
+        <li>訂完用 WhatsApp 跟主辦確認登船碼頭：+84 938 485 438</li>
+        <li>9/25 非國定假日，不用付附加費；江風偏涼可帶薄外套</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="https://www.klook.com/zh-TW/activity/23321-han-river-cruise-my-xuan-cruise-da-nang/" target="_blank">Klook 訂票</a>
+        <a class="btn" href="https://maps.google.com/?cid=329807663884316974" target="_blank">龍橋位置</a>
+      </div>
+      <div class="move">下船後搭 Grab 回美溪沙灘，車程約 10 分鐘</div>
+    </div>
+  </div>
+
+  <!-- Beach bar -->
+  <div class="stop night">
+    <div class="dot">🎶</div>
+    <div class="time">21:45 – 盡興為止</div>
+    <div class="card">
+      <h2>Esco Beach Bar <span class="tag">海灘微醺收尾</span></h2>
+      <div class="rating">★ 4.6（7,200+ 評價）｜美溪沙灘正對面｜營業至 24:00</div>
+      <p>看完噴火秀回沙灘這側，吹著海風喝一杯完美收尾。Esco 有現場樂團、薩克斯風、DJ 和火舞表演，晚上氣氛正好。</p>
+      <ul>
+        <li>想喝晚一點：Malibu Beach Club（★4.8）開到凌晨 2 點</li>
+        <li>想更 chill：隔壁 Lounge Beach Bar（★4.8）價位更親民，開到凌晨 1 點</li>
+      </ul>
+      <div class="links"><a class="btn" href="https://maps.google.com/?cid=3113794275195289540" target="_blank">Google 地圖</a></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Checklist -->
+<div class="panel">
+  <h3>✅ 出發前備忘</h3>
+  <table>
+    <tr><td>📞 All Seasons 訂位（17:30、報人數）</td><td>+84 764 068 111</td></tr>
+    <tr><td>📞 Golden Lotus Spa 預約（13:45）</td><td>+84 236 6559 090</td></tr>
+    <tr><td>🚢 Klook 訂遊船（20:15 船班）＋ WhatsApp 確認碼頭</td><td>+84 938 485 438</td></tr>
+    <tr><td>🎫 KKday / Klook 買龍蝦餐券（含稅較划算）</td><td>出發前3天</td></tr>
+    <tr><td>💵 換好越盾現金（小費、雜支用）</td><td>建議 2,000k+</td></tr>
+    <tr><td>📱 下載 Grab App＋綁定付款</td><td>必備</td></tr>
+    <tr><td>🧥 帶件薄外套（遊船江風偏涼）</td><td>小提醒</td></tr>
+  </table>
+</div>
+
+<footer>
+  <div class="wave">〜〜〜</div>
+  Đà Nẵng · Han River · My Khe Beach · 2026.09.25<br>
+  吃好吃滿・玩好玩滿・平安順心
+</footer>
+
+</div>
+</body>
+</html>
