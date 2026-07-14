@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>峴港一日行程｜9/25（五）龍蝦吃到飽之日</title>
+<title>峴港五日遊｜9/22–9/26 中越雙城 + 9/25 自由行攻略</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -24,10 +24,10 @@ body{
   color:var(--ink);
   background:linear-gradient(180deg,
     #bfe3e8 0%,
-    #e9f4ee 12%,
-    #f6efe3 30%,
-    #f8e3c8 50%,
-    #f3c08b 60%,
+    #e9f4ee 8%,
+    #f6efe3 22%,
+    #f8e3c8 42%,
+    #f3c08b 56%,
     #b06a55 70%,
     #3f3a5c 82%,
     #131c33 100%);
@@ -36,52 +36,64 @@ body{
 .wrap{max-width:860px;margin:0 auto;padding:0 20px}
 
 /* ---------- Hero ---------- */
-header{padding:64px 0 40px;text-align:center}
+header{padding:56px 0 32px;text-align:center}
 .eyebrow{
   display:inline-block;letter-spacing:.35em;font-size:12px;font-weight:700;
   color:var(--sea-deep);text-transform:uppercase;margin-bottom:14px;
 }
 h1{
   font-family:'Noto Serif TC',serif;font-weight:900;
-  font-size:clamp(34px,6vw,56px);line-height:1.25;color:var(--sea-deep);
+  font-size:clamp(32px,6vw,54px);line-height:1.25;color:var(--sea-deep);
 }
 h1 .accent{color:var(--lobster)}
 .sub{margin-top:14px;font-size:15px;color:#3c5560}
-.badges{margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.badges{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .badge{
   background:rgba(255,255,255,.75);border:1px solid rgba(14,111,124,.25);
   border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;color:var(--sea-deep);
   backdrop-filter:blur(4px);
 }
+.hero-art{max-width:520px;margin:18px auto 0;display:block}
 
-/* ---------- Sun / Moon dial ---------- */
-.dial{
-  margin:8px auto 0;width:120px;height:60px;position:relative;overflow:hidden;
+/* ---------- Day nav ---------- */
+.daynav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.daynav a{
+  font-size:13px;font-weight:700;text-decoration:none;color:var(--sea-deep);
+  background:rgba(255,255,255,.85);border:1.5px solid rgba(14,111,124,.35);
+  border-radius:999px;padding:7px 15px;transition:.2s;
 }
-.dial::before{
-  content:'';position:absolute;inset:0 0 -60px 0;border-radius:50%;
-  border:2px dashed rgba(14,111,124,.4);
+.daynav a:hover{background:var(--sea);color:#fff}
+.daynav a.hotday{border-color:var(--lobster);color:var(--lobster)}
+.daynav a.hotday:hover{background:var(--lobster);color:#fff}
+
+/* ---------- Section titles ---------- */
+.sec-title{
+  font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(22px,4vw,30px);
+  color:var(--sea-deep);text-align:center;margin:52px 0 4px;
 }
-.dial .sun{
-  position:absolute;left:8px;bottom:2px;width:18px;height:18px;border-radius:50%;
-  background:var(--gold);box-shadow:0 0 18px rgba(242,178,92,.9);
-  animation:arc 9s linear infinite;
+.sec-title .d-date{color:var(--lobster)}
+.sec-sub{text-align:center;font-size:13.5px;color:#4a6672;margin-bottom:6px}
+.meals{
+  text-align:center;font-size:12.5px;color:#6b5a34;margin-bottom:18px;
 }
-@keyframes arc{
-  0%{left:6px;bottom:0;background:var(--gold)}
-  50%{left:51px;bottom:38px;background:var(--gold)}
-  100%{left:96px;bottom:0;background:var(--lobster)}
+.meals span{
+  display:inline-block;background:rgba(255,255,255,.7);border:1px dashed rgba(201,141,47,.5);
+  border-radius:999px;padding:3px 12px;margin:2px 3px;
 }
-@media (prefers-reduced-motion:reduce){.dial .sun{animation:none;left:51px;bottom:38px}}
+.late .sec-title{color:#f4d9a6}
+.late .sec-sub{color:#aab4d8}
+.late .meals{color:#e3c98e}
+.late .meals span{background:rgba(24,32,56,.7);border-color:rgba(242,178,92,.4)}
 
 /* ---------- Timeline ---------- */
-.timeline{position:relative;padding:36px 0 24px}
+.timeline{position:relative;padding:20px 0 10px}
 .timeline::before{
   content:'';position:absolute;top:0;bottom:0;left:26px;width:3px;
-  background:linear-gradient(180deg,var(--sea) 0%,var(--gold) 42%,var(--lobster) 60%,#6d7bb0 100%);
-  border-radius:3px;
+  background:linear-gradient(180deg,var(--sea),var(--gold));
+  border-radius:3px;opacity:.85;
 }
-.stop{position:relative;padding:0 0 34px 72px}
+.timeline.tl-night::before{background:linear-gradient(180deg,var(--gold),var(--lobster),#6d7bb0)}
+.stop{position:relative;padding:0 0 30px 72px}
 .stop:last-child{padding-bottom:8px}
 .stop .dot{
   position:absolute;left:13px;top:6px;width:29px;height:29px;border-radius:50%;
@@ -96,13 +108,15 @@ h1 .accent{color:var(--lobster)}
 }
 .stop.night .time,.stop.night .move{color:#cdd6f4}
 .card{
-  background:rgba(255,255,255,.88);border-radius:18px;padding:22px 24px;
+  background:rgba(255,255,255,.9);border-radius:18px;overflow:hidden;
   box-shadow:0 6px 24px rgba(16,34,46,.08);border:1px solid rgba(14,111,124,.12);
-  backdrop-filter:blur(6px);
 }
-.stop.night .card{background:rgba(24,32,56,.88);border-color:rgba(138,150,200,.3);color:#e8ecfa}
+.card-art{height:112px;position:relative}
+.card-art svg{position:absolute;inset:0;width:100%;height:100%}
+.card-inner{padding:16px 24px 20px}
+.stop.night .card{background:rgba(24,32,56,.9);border-color:rgba(138,150,200,.3);color:#e8ecfa}
 .card h2{
-  font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--sea-deep);
+  font-family:'Noto Serif TC',serif;font-size:21px;font-weight:700;color:var(--sea-deep);
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
 .stop.night .card h2{color:#f4d9a6}
@@ -114,12 +128,12 @@ h1 .accent{color:var(--lobster)}
 .stop.night .tag{background:#5a68a0}
 .rating{font-size:13px;color:#7a6a3d;font-weight:500;margin-top:2px}
 .stop.night .rating{color:#e3c98e}
-.card p{margin-top:10px;font-size:14.5px}
-.card ul{margin:10px 0 0 2px;list-style:none}
-.card li{font-size:14.5px;padding-left:22px;position:relative;margin-top:6px}
+.card p{margin-top:9px;font-size:14.5px}
+.card ul{margin:9px 0 0 2px;list-style:none}
+.card li{font-size:14px;padding-left:22px;position:relative;margin-top:5px}
 .card li::before{content:'—';position:absolute;left:0;color:var(--lobster);font-weight:700}
 .stop.night .card li::before{color:#f2b25c}
-.links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.links{margin-top:13px;display:flex;gap:10px;flex-wrap:wrap}
 .btn{
   display:inline-block;font-size:13px;font-weight:700;text-decoration:none;
   padding:7px 16px;border-radius:999px;border:1.5px solid var(--sea);color:var(--sea-deep);
@@ -130,14 +144,13 @@ h1 .accent{color:var(--lobster)}
 .btn.hot:hover{background:var(--lobster);color:#fff}
 .stop.night .btn{border-color:#8a96c8;color:#cdd6f4}
 .stop.night .btn:hover{background:#8a96c8;color:var(--night)}
-.move{
-  font-size:12.5px;color:#4a6672;margin-top:12px;letter-spacing:.05em;
-}
-.move::before{content:'🚕 ';font-size:12px}
+.move{font-size:12.5px;color:#4a6672;margin-top:11px;letter-spacing:.05em}
+.move::before{content:'🚌 ';font-size:12px}
+.move.grab::before{content:'🚕 '}
 
 /* ---------- Lobster menu ---------- */
 .menu{
-  margin-top:14px;border-top:1px dashed rgba(228,87,46,.5);padding-top:12px;
+  margin-top:13px;border-top:1px dashed rgba(228,87,46,.5);padding-top:11px;
   display:grid;grid-template-columns:1fr auto;gap:4px 16px;font-size:14px;
 }
 .menu .price{font-weight:700;color:var(--lobster);white-space:nowrap}
@@ -145,7 +158,7 @@ h1 .accent{color:var(--lobster)}
 /* ---------- Info panels ---------- */
 .panel{
   background:rgba(19,28,51,.92);color:#e8ecfa;border-radius:20px;
-  padding:28px 28px;margin:28px 0;border:1px solid rgba(138,150,200,.3);
+  padding:26px 28px;margin:30px 0;border:1px solid rgba(138,150,200,.3);
 }
 .panel h3{
   font-family:'Noto Serif TC',serif;font-size:19px;color:#f4d9a6;margin-bottom:12px;
@@ -153,18 +166,22 @@ h1 .accent{color:var(--lobster)}
 .panel table{width:100%;border-collapse:collapse;font-size:14px}
 .panel td{padding:7px 4px;border-bottom:1px solid rgba(138,150,200,.2);vertical-align:top}
 .panel td:last-child{text-align:right;white-space:nowrap;color:#f2b25c;font-weight:700}
-.panel .note{font-size:12.5px;color:#aab4d8;margin-top:12px}
+
+.tour-note{
+  margin-top:8px;font-size:12.5px;color:#5a7280;background:rgba(255,255,255,.6);
+  border-radius:12px;padding:10px 16px;border:1px dashed rgba(14,111,124,.3);
+}
 
 footer{
   text-align:center;padding:20px 0 48px;color:#8a96c8;font-size:12.5px;letter-spacing:.1em;
 }
 footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
 
-@media (max-width:560px){
+@media (max-width:640px){
   .timeline::before{left:18px}
   .stop{padding-left:56px}
   .stop .dot{left:5px;width:27px;height:27px}
-  .card{padding:18px 18px}
+  .card-inner{padding:15px 18px 18px}
 }
 </style>
 </head>
@@ -172,36 +189,570 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Đà Nẵng · 2026.09.25 · Friday</div>
-  <h1>峴港一日行程<br><span class="accent">龍蝦吃到飽</span>之日</h1>
-  <div class="dial" aria-hidden="true"><div class="sun"></div></div>
-  <p class="sub">飯店早餐吃飽 → 10:30 出門｜全天冷氣友善・韓江遊船看噴火秀零折返</p>
+  <div class="eyebrow">Đà Nẵng · 2026.09.22 – 09.26 · China Airlines 直飛 · 無購物站</div>
+  <h1>峴港五日遊<br><span class="accent">中越雙城</span>×<span class="accent">自由行攻略</span></h1>
+  <p class="sub">可樂旅遊 VDZ092205CI6｜含餐：D1晚・D2三餐・D3三餐・D4早・D5早＋機上簡餐</p>
   <div class="badges">
-    <span class="badge">🛍️ 購物掃貨</span>
-    <span class="badge">💆 越式洗頭＋按摩</span>
-    <span class="badge">🦞 龍蝦無限</span>
+    <span class="badge">✈️ 華航直飛</span>
+    <span class="badge">🌉 佛手天空步道</span>
+    <span class="badge">🏮 會安古鎮</span>
+    <span class="badge">🦞 龍蝦吃到飽</span>
     <span class="badge">🚢 韓江遊船</span>
-    <span class="badge">🐉 船上看噴火秀</span>
-    <span class="badge">🎶 沙灘酒吧</span>
+    <span class="badge">🐉 龍橋噴火秀</span>
   </div>
+  <!-- Hero art -->
+  <svg class="hero-art" viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="峴港海岸插畫">
+    <defs>
+      <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe9c4"/><stop offset="1" stop-color="#ffd39b"/>
+      </linearGradient>
+      <linearGradient id="hsea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2a8d9c"/><stop offset="1" stop-color="#0e6f7c"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="520" height="110" rx="16" fill="url(#hsky)"/>
+    <circle cx="430" cy="46" r="24" fill="#f2b25c"/>
+    <circle cx="430" cy="46" r="32" fill="#f2b25c" opacity=".25"/>
+    <path d="M0 78 L70 40 L120 66 L180 30 L250 70 L300 52 L360 78 Z" fill="#5da3a0" opacity=".55"/>
+    <path d="M120 96 Q260 60 520 92 L520 110 L0 110 Z" fill="#7fc0b4" opacity=".5"/>
+    <rect x="0" y="108" width="520" height="46" rx="14" fill="url(#hsea)"/>
+    <path d="M0 120 Q40 114 80 120 T160 120 T240 120 T320 120 T400 120 T480 120 T560 120" stroke="#bfe8ea" stroke-width="2.5" fill="none" opacity=".6"/>
+    <path d="M0 136 Q50 130 100 136 T200 136 T300 136 T400 136 T500 136" stroke="#bfe8ea" stroke-width="2" fill="none" opacity=".35"/>
+    <path d="M120 100 Q160 78 200 96 Q240 112 280 94 Q320 78 356 96" stroke="#e4572e" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="360" cy="94" r="7" fill="#e4572e"/>
+    <path d="M366 92 L386 84 L372 98 Z" fill="#f2b25c"/>
+    <path d="M430 128 L470 128 L462 140 L438 140 Z" fill="#f6efe3"/>
+    <rect x="448" y="112" width="3" height="16" fill="#f6efe3"/>
+    <path d="M451 112 L466 124 L451 124 Z" fill="#f2b25c"/>
+  </svg>
+  <nav class="daynav">
+    <a href="#day1">D1 抵達</a>
+    <a href="#day2">D2 巴拿山</a>
+    <a href="#day3">D3 會安</a>
+    <a class="hotday" href="#day4">D4 ★自由日</a>
+    <a href="#day5">D5 返程</a>
+  </nav>
+  <div class="tour-note" style="margin-top:20px">📋 跟團日（D1–D3、D5）時間為參考節奏，實際依導遊安排，可能小幅調整順序但保證全部走完；住宿為四星：黃金蓮花格蘭 / 白玉蘭 / GIC豪華水療 / 黃金蓮花豪華（或同級），以當團行前說明會公佈為準。</div>
 </header>
 
+<!-- ================================================== DAY 1 ================================================== -->
+<h2 class="sec-title" id="day1">DAY 1<span class="d-date">｜9/22（二）</span>桃園 ✈ 峴港</h2>
+<p class="sec-sub">出發日！抵達後車遊韓江，晚上入住峴港市區</p>
+<div class="meals"><span>早：Ｘ</span><span>午：機上簡餐</span><span>晚：海城中越料理（含飲品一杯）</span></div>
+
 <section class="timeline">
+
+  <div class="stop">
+    <div class="dot">✈️</div>
+    <div class="time">上午｜桃園國際機場 → 峴港</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#bfe3e8"/>
+          <circle cx="330" cy="26" r="15" fill="#f2b25c"/>
+          <path d="M0 84 Q100 68 200 80 T400 76 L400 112 L0 112 Z" fill="#7fc0b4"/>
+          <g transform="translate(120,36) rotate(-10)">
+            <ellipse cx="40" cy="14" rx="44" ry="11" fill="#fdfcf9"/>
+            <path d="M36 7 L14 -18 L26 -18 L52 7 Z" fill="#fdfcf9"/>
+            <path d="M36 22 L20 42 L31 42 L52 22 Z" fill="#fdfcf9"/>
+            <path d="M78 9 L94 2 L88 15 Z" fill="#e4572e"/>
+            <circle cx="18" cy="14" r="3.4" fill="#0e6f7c"/><circle cx="30" cy="14" r="3.4" fill="#0e6f7c"/><circle cx="42" cy="14" r="3.4" fill="#0e6f7c"/><circle cx="54" cy="14" r="3.4" fill="#0e6f7c"/>
+          </g>
+          <path d="M30 30 q10 -12 20 0 q-10 7 -20 0Z" fill="#fff" opacity=".85"/>
+          <path d="M70 52 q8 -10 16 0 q-8 6 -16 0Z" fill="#fff" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>華航直飛峴港 <span class="tag">出發</span></h2>
+        <p>桃園機場集合辦理登機，華航直飛峴港約2.5小時，午餐在機上解決。峴港比台灣慢1小時，落地記得調時差。</p>
+        <ul>
+          <li>越南簽證、護照效期6個月以上，出發前再檢查一次</li>
+          <li>機上或機場先下載好 Grab、Google 離線地圖</li>
+          <li>行李記得放一件薄外套（D2巴拿山溫差6–12度會用到）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🌊</div>
+    <div class="time">午後｜峴港國際機場 → 市區</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#ffe9c4"/>
+          <circle cx="70" cy="26" r="13" fill="#f2b25c"/>
+          <rect x="0" y="70" width="400" height="42" fill="#2a8d9c"/>
+          <path d="M0 80 Q50 75 100 80 T200 80 T300 80 T400 80" stroke="#bfe8ea" stroke-width="2" fill="none" opacity=".6"/>
+          <!-- dragon bridge -->
+          <path d="M60 62 Q130 26 200 52 Q270 76 340 44" stroke="#e4572e" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <circle cx="343" cy="43" r="8" fill="#e4572e"/>
+          <path d="M350 40 L376 32 L362 48 Z" fill="#f2b25c"/>
+          <rect x="90" y="60" width="6" height="14" fill="#c8431f"/>
+          <rect x="196" y="52" width="6" height="22" fill="#c8431f"/>
+          <rect x="300" y="52" width="6" height="20" fill="#c8431f"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>車遊韓江・初見龍橋 <span class="tag">城市巡禮</span></h2>
+        <p>抵達後專車車遊韓江，沿岸欣賞峴港市景，橫跨韓江的地標龍橋是第一個亮點——先坐車看白天版，9/25自由日晚上我們會在遊船上看牠噴火！</p>
+        <ul>
+          <li>車上導遊會推薦當地特產，依個人需求選購即可（全程無購物站）</li>
+          <li>沿路留意韓江上的愛情橋、鯉魚化龍雕像位置，自由日會再訪</li>
+        </ul>
+      </div>
+      <div class="move" style="display:none"></div>
+    </div>
+  </div>
+
+  <div class="stop evening">
+    <div class="dot">🍜</div>
+    <div class="time">晚間｜晚餐＋入住</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#f8e3c8"/>
+          <ellipse cx="140" cy="84" rx="70" ry="14" fill="#fdfcf9"/>
+          <path d="M92 66 Q140 96 188 66 L182 84 Q140 102 98 84 Z" fill="#e4572e"/>
+          <path d="M104 62 Q140 84 176 62" stroke="#f2b25c" stroke-width="5" fill="none"/>
+          <path d="M118 50 q-5 -10 0 -18 M140 46 q-5 -10 0 -18 M162 50 q-5 -10 0 -18" stroke="#b06a55" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/>
+          <rect x="196" y="38" width="4" height="42" rx="2" fill="#8a5f2e" transform="rotate(12 198 59)"/>
+          <rect x="206" y="38" width="4" height="42" rx="2" fill="#8a5f2e" transform="rotate(4 208 59)"/>
+          <!-- beer -->
+          <g transform="translate(280,44)">
+            <rect x="0" y="6" width="30" height="40" rx="5" fill="#f2b25c"/>
+            <rect x="0" y="6" width="30" height="10" rx="5" fill="#fdf3d8"/>
+            <rect x="32" y="14" width="10" height="20" rx="5" fill="none" stroke="#f2b25c" stroke-width="4"/>
+            <circle cx="8" cy="0" r="4" fill="#fdf3d8"/><circle cx="17" cy="-4" r="3.4" fill="#fdf3d8"/><circle cx="25" cy="0" r="3.8" fill="#fdf3d8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>海城中越料理 <span class="tag">晚餐</span></h2>
+        <div class="rating">含啤酒或軟飲每人一杯（US$8）</div>
+        <p>第一晚用中越合璧的料理開場，配一杯冰涼的越南啤酒。飯後入住峴港四星飯店，養精蓄銳迎接明天的巴拿山。</p>
+        <ul>
+          <li>入住後可到飯店附近便利店補水、換小鈔</li>
+          <li>睡前確認明天集合時間——巴拿山是全天行程</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================== DAY 2 ================================================== -->
+<h2 class="sec-title" id="day2">DAY 2<span class="d-date">｜9/23（三）</span>粉紅教堂・巴拿山全日</h2>
+<p class="sec-sub">市區地標巡禮後上山：纜車、佛手橋、法國山城、樂園一次收</p>
+<div class="meals"><span>早：飯店</span><span>午：巴拿山自助餐</span><span>晚：山陽中越式餐廳（含飲品一杯）</span></div>
+
+<section class="timeline">
+
+  <div class="stop">
+    <div class="dot">⛪</div>
+    <div class="time">上午｜市區</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#e9f4ee"/>
+          <circle cx="330" cy="24" r="12" fill="#f2b25c"/>
+          <!-- pink cathedral -->
+          <rect x="168" y="38" width="64" height="74" fill="#efa8b8"/>
+          <path d="M160 38 L200 14 L240 38 Z" fill="#e58fa5"/>
+          <rect x="192" y="2" width="16" height="20" fill="#efa8b8"/>
+          <path d="M188 4 L200 -8 L212 4 Z" fill="#e58fa5"/>
+          <line x1="200" y1="-14" x2="200" y2="-4" stroke="#8a4a5c" stroke-width="3"/>
+          <line x1="195" y1="-10" x2="205" y2="-10" stroke="#8a4a5c" stroke-width="3"/>
+          <circle cx="200" cy="52" r="9" fill="#fdfcf9"/>
+          <circle cx="200" cy="52" r="4.5" fill="#e58fa5"/>
+          <rect x="180" y="76" width="12" height="26" rx="6" fill="#fdfcf9"/>
+          <rect x="208" y="76" width="12" height="26" rx="6" fill="#fdfcf9"/>
+          <rect x="194" y="70" width="12" height="32" rx="6" fill="#c76f88"/>
+          <path d="M0 112 L0 96 Q60 86 120 96 L120 112 Z" fill="#7fc0b4" opacity=".6"/>
+          <path d="M280 112 L280 96 Q340 86 400 96 L400 112 Z" fill="#7fc0b4" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>粉紅教堂＋APEC廣場 <span class="tag">打卡地標</span></h2>
+        <p>法國殖民時期興建的哥德式峴港大教堂，全身淡粉紅色超好拍；接著到APEC廣場，看各經濟體贈送的雕塑作品。上午光線斜射拍教堂最美。</p>
+        <ul>
+          <li>教堂正面在人行道對面拍最完整，小心來車</li>
+          <li>把握時間拍照，重頭戲巴拿山在後面</li>
+        </ul>
+      </div>
+      <div class="move">專車前往巴拿山，車程約 45–60 分鐘</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🚡</div>
+    <div class="time">上午｜巴拿山山腳</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#dcefe4"/>
+          <path d="M0 92 L70 34 L140 92 Z" fill="#5da3a0"/>
+          <path d="M90 92 L180 12 L270 92 Z" fill="#3f7d80"/>
+          <path d="M220 92 L290 40 L360 92 Z" fill="#5da3a0"/>
+          <rect x="0" y="90" width="400" height="22" fill="#8fbfae"/>
+          <path d="M0 22 L400 78" stroke="#7c8f8a" stroke-width="2.5"/>
+          <g transform="translate(120,40)"><rect x="0" y="6" width="26" height="20" rx="4" fill="#e4572e"/><rect x="10" y="-2" width="5" height="10" fill="#7c8f8a"/><rect x="4" y="11" width="7" height="8" rx="1.5" fill="#fdf3d8"/><rect x="15" y="11" width="7" height="8" rx="1.5" fill="#fdf3d8"/></g>
+          <g transform="translate(250,60)"><rect x="0" y="6" width="26" height="20" rx="4" fill="#f2b25c"/><rect x="10" y="-2" width="5" height="10" fill="#7c8f8a"/><rect x="4" y="11" width="7" height="8" rx="1.5" fill="#fdf3d8"/><rect x="15" y="11" width="7" height="8" rx="1.5" fill="#fdf3d8"/></g>
+          <path d="M30 40 q8 -9 16 0 q-8 5 -16 0Z" fill="#fff" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>巴拿山登山纜車 <span class="tag">世界級</span></h2>
+        <p>曾列《全球最長》《最高不停站》紀錄的登山纜車，一路爬升千餘公尺，腳下是原始叢林與瀑布，遠眺峴港海岸線，光是上山就值回票價。</p>
+        <ul>
+          <li>山上與平地溫差6–12度，外套現在就穿上或拿在手上</li>
+          <li>園區禁帶外食與飲料，入園會不定時抽檢隨身包包</li>
+          <li>斜坡階梯多，行動不便者可帶簡易登山杖</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🤲</div>
+    <div class="time">午前｜巴拿山</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#cfe7df"/>
+          <path d="M0 76 L60 30 L120 76 Z" fill="#5da3a0" opacity=".7"/>
+          <path d="M280 76 L340 26 L400 76 Z" fill="#5da3a0" opacity=".7"/>
+          <rect x="0" y="74" width="400" height="38" fill="#8fbfae"/>
+          <path d="M40 62 Q200 30 360 62" stroke="#f2b25c" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M40 62 Q200 30 360 62" stroke="#e4a23c" stroke-width="2.5" fill="none" stroke-dasharray="5 8"/>
+          <path d="M118 100 q-6 -26 12 -34 q3 11 0 17 q11 -8 17 3 q-14 5 -29 14Z" fill="#d7ded9" stroke="#9fb2ac" stroke-width="2"/>
+          <path d="M282 100 q6 -26 -12 -34 q-3 11 0 17 q-11 -8 -17 3 q14 5 29 14Z" fill="#d7ded9" stroke="#9fb2ac" stroke-width="2"/>
+          <path d="M180 40 q8 -9 16 0 q-8 5 -16 0Z" fill="#fff" opacity=".85"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>佛手天空步道（黃金佛手橋）<span class="tag">必拍</span></h2>
+        <div class="rating">★ 4.6（1.3萬+ 評價）｜全長約150公尺</div>
+        <p>兩隻巨大石手托起金色橋身，像一條懸在半空的金色緞帶，是全越南最紅的打卡點。走在橋上被群山雲霧包圍，實景比照片更震撼。</p>
+        <ul>
+          <li>人潮尖峰在10:00後，跟著導遊動線、看到空檔就先拍</li>
+          <li>經典構圖：貼著石手拍出「被手掌托住」的視角</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🚂</div>
+    <div class="time">中午前後｜巴拿山</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#e6efe0"/>
+          <circle cx="60" cy="22" r="11" fill="#f2b25c"/>
+          <path d="M0 84 Q100 70 200 82 T400 78 L400 112 L0 112 Z" fill="#8fbfae"/>
+          <!-- garden shrubs -->
+          <circle cx="70" cy="76" r="14" fill="#3a9480"/><circle cx="96" cy="80" r="10" fill="#2f7d6d"/>
+          <circle cx="320" cy="76" r="14" fill="#3a9480"/><circle cx="346" cy="80" r="10" fill="#2f7d6d"/>
+          <!-- little train -->
+          <g transform="translate(140,52)">
+            <rect x="0" y="10" width="46" height="28" rx="6" fill="#e4572e"/>
+            <rect x="6" y="0" width="20" height="14" rx="4" fill="#c8431f"/>
+            <circle cx="12" cy="42" r="7" fill="#131c33"/><circle cx="34" cy="42" r="7" fill="#131c33"/>
+            <rect x="52" y="16" width="36" height="22" rx="5" fill="#f2b25c"/>
+            <circle cx="60" cy="42" r="6" fill="#131c33"/><circle cx="80" cy="42" r="6" fill="#131c33"/>
+            <rect x="58" y="21" width="9" height="9" rx="2" fill="#fdf3d8"/><rect x="72" y="21" width="9" height="9" rx="2" fill="#fdf3d8"/>
+            <circle cx="4" cy="-6" r="4" fill="#d7ded9"/><circle cx="12" cy="-12" r="3.4" fill="#e3ebe6"/>
+          </g>
+          <line x1="120" y1="98" x2="300" y2="98" stroke="#8a5f2e" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>靜心園（小火車）＋ 巴拿山自助午餐 <span class="tag">歐風庭園</span></h2>
+        <p>搭復古小火車穿梭歐式靜心園與百年酒窖遺跡，中午在山上享用自助餐（US$11），補充體力後繼續玩。</p>
+        <ul>
+          <li>小火車如遇人潮或維修停駛，依園方現場狀況為準</li>
+          <li>自助餐人多，跟緊導遊安排的時段入場比較不用排</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🏰</div>
+    <div class="time">下午｜巴拿山</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#dce8ef"/>
+          <path d="M0 92 L400 92 L400 112 L0 112 Z" fill="#9fb8c4"/>
+          <!-- french castle -->
+          <rect x="150" y="42" width="100" height="50" fill="#c9b8a5"/>
+          <rect x="132" y="30" width="26" height="62" fill="#b3a18c"/>
+          <path d="M128 30 L145 8 L162 30 Z" fill="#7a5b78"/>
+          <rect x="242" y="30" width="26" height="62" fill="#b3a18c"/>
+          <path d="M238 30 L255 8 L272 30 Z" fill="#7a5b78"/>
+          <rect x="188" y="20" width="24" height="72" fill="#c9b8a5"/>
+          <path d="M184 20 L200 -2 L216 20 Z" fill="#7a5b78"/>
+          <rect x="196" y="60" width="10" height="32" rx="5" fill="#5c4a3a"/>
+          <rect x="164" y="56" width="9" height="13" rx="4" fill="#fdf3d8"/><rect x="228" y="56" width="9" height="13" rx="4" fill="#fdf3d8"/>
+          <rect x="140" y="44" width="8" height="12" rx="4" fill="#fdf3d8"/><rect x="252" y="44" width="8" height="12" rx="4" fill="#fdf3d8"/>
+          <line x1="200" y1="-8" x2="200" y2="-2" stroke="#e4572e" stroke-width="2.5"/>
+          <path d="M200 -8 L214 -4 L200 0 Z" fill="#e4572e"/>
+          <!-- ferris wheel hint -->
+          <circle cx="70" cy="62" r="22" fill="none" stroke="#c76f88" stroke-width="3"/>
+          <circle cx="70" cy="62" r="3.4" fill="#c76f88"/>
+          <line x1="70" y1="40" x2="70" y2="84" stroke="#c76f88" stroke-width="2"/>
+          <line x1="48" y1="62" x2="92" y2="62" stroke="#c76f88" stroke-width="2"/>
+          <path d="M56 92 L70 62 L84 92" stroke="#c76f88" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>法國山城＋Fantasy Park夢想樂園 <span class="tag">童話山城</span></h2>
+        <p>以法式建築打造的山中小鎮：石板路、尖塔教堂、歐式廣場，彷彿瞬移到法國。Fantasy Park室內樂園遊樂設施大多免費暢玩，下雨也不怕。</p>
+        <ul>
+          <li>山城廣場常有街頭表演，抓緊時間看一場</li>
+          <li>下山纜車人潮多，跟緊導遊集合時間別戀戰</li>
+        </ul>
+      </div>
+      <div class="move">下山返回峴港市區，晚餐山陽中越式餐廳（含飲品一杯）</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================== DAY 3 ================================================== -->
+<h2 class="sec-title" id="day3">DAY 3<span class="d-date">｜9/24（四）</span>靈應寺・五行山・迦南島・會安</h2>
+<p class="sec-sub">峴港經典景點一日集滿，傍晚走進燈籠古鎮</p>
+<div class="meals"><span>早：飯店</span><span>午：迦南島農家料理（含飲品）</span><span>晚：古鎮風味餐（含飲品）</span></div>
+
+<section class="timeline">
+
+  <div class="stop">
+    <div class="dot">🙏</div>
+    <div class="time">上午｜山茶半島</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#e9f4ee"/>
+          <circle cx="70" cy="24" r="12" fill="#f2b25c"/>
+          <rect x="0" y="86" width="400" height="26" fill="#2a8d9c"/>
+          <path d="M0 94 Q60 89 120 94 T240 94 T360 94 T480 94" stroke="#bfe8ea" stroke-width="2" fill="none" opacity=".6"/>
+          <path d="M250 86 Q320 60 400 78 L400 112 L250 112 Z" fill="#5da3a0" opacity=".6"/>
+          <!-- Lady Buddha -->
+          <g transform="translate(200,10)">
+            <ellipse cx="0" cy="76" rx="26" ry="7" fill="#c9d6d1"/>
+            <path d="M-16 74 Q-12 30 0 22 Q12 30 16 74 Z" fill="#f4f7f5"/>
+            <circle cx="0" cy="14" r="9" fill="#f4f7f5"/>
+            <path d="M-7 8 Q0 -4 7 8" fill="#e3ebe6"/>
+            <path d="M-4 4 L0 -6 L4 4 Z" fill="#e3ebe6"/>
+            <path d="M-16 42 Q0 50 16 42" stroke="#dbe5e0" stroke-width="3" fill="none"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>山茶半島・靈應寺 <span class="tag">越南最高觀音</span></h2>
+        <p>大理石雕成的觀音像高67公尺、面海而立，是漁民的守護神；居高俯瞰峴港海岸線，藍海白沙一次盡收。</p>
+        <ul>
+          <li>寺廟服裝：過膝褲裙、不露肩不露肚（今天全天適用）</li>
+          <li>觀音像前的海景平台是最佳拍照點</li>
+        </ul>
+      </div>
+      <div class="move">前往美溪沙灘，車程約 15 分鐘</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🏖️</div>
+    <div class="time">上午｜海岸線</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#bfe3e8"/>
+          <circle cx="330" cy="24" r="14" fill="#f2b25c"/>
+          <rect x="0" y="56" width="400" height="30" fill="#2a8d9c"/>
+          <path d="M0 62 Q50 57 100 62 T200 62 T300 62 T400 62" stroke="#bfe8ea" stroke-width="2.5" fill="none" opacity=".7"/>
+          <path d="M0 86 Q200 70 400 88 L400 112 L0 112 Z" fill="#efd9ae"/>
+          <!-- umbrella -->
+          <g transform="translate(110,58)">
+            <path d="M-26 10 Q0 -18 26 10 Z" fill="#e4572e"/>
+            <path d="M-26 10 Q-13 2 0 10 Q13 2 26 10" stroke="#c8431f" stroke-width="2" fill="none"/>
+            <rect x="-1.5" y="10" width="3" height="30" fill="#8a5f2e"/>
+          </g>
+          <ellipse cx="180" cy="98" rx="18" ry="5" fill="#e2c astro8f" opacity="0"/>
+          <path d="M240 44 q10 -10 20 0 q-10 6 -20 0Z" fill="#fff" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>美溪沙灘 <span class="tag">世界六大美灘</span></h2>
+        <div class="rating">★ 4.7（4,400+ 評價）</div>
+        <p>《世界六大美麗沙灘》之一：綿長細白的沙、湛藍海水與椰影。今天先踩點感受，9/25自由日晚上會回到這條沙灘的海灘酒吧微醺收尾。</p>
+        <ul>
+          <li>拍照記得抓海平線水平；上午順光效果最好</li>
+          <li>浪況多變，跟團時間有限別下水太深</li>
+        </ul>
+      </div>
+      <div class="move">前往五行山，車程約 15 分鐘</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">⛰️</div>
+    <div class="time">中午前後｜五行山</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#e6efe0"/>
+          <path d="M40 112 Q60 40 110 34 Q150 32 168 112 Z" fill="#6f9c8a"/>
+          <path d="M150 112 Q180 22 232 20 Q286 22 312 112 Z" fill="#54857a"/>
+          <path d="M290 112 Q312 52 352 48 Q386 48 400 112 Z" fill="#6f9c8a"/>
+          <!-- cave opening -->
+          <path d="M206 112 Q206 72 232 70 Q258 72 258 112 Z" fill="#2c4a44"/>
+          <circle cx="232" cy="88" r="6" fill="#f2b25c" opacity=".9"/>
+          <!-- pagoda on top -->
+          <rect x="222" y="34" width="20" height="16" fill="#b3543a"/>
+          <path d="M216 34 L232 22 L248 34 Z" fill="#8a3f2c"/>
+          <path d="M220 22 L232 12 L244 22 Z" fill="#8a3f2c"/>
+          <circle cx="70" cy="20" r="10" fill="#f2b25c"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>五行山（含電梯上下）<span class="tag">大理石聖山</span></h2>
+        <div class="rating">★ 4.5（2萬+ 評價）</div>
+        <p>金木水火土五座大理石山，這次登的是最大的「水山」：山中藏著玄空洞等鐘乳石洞窟，光線從洞頂灑落在佛像上，超有神聖感。含電梯上下省力不少。</p>
+        <ul>
+          <li>洞窟內部分路面濕滑、有階梯，穿好走的鞋</li>
+          <li>行動較不便者可帶簡易登山杖輔助</li>
+        </ul>
+      </div>
+      <div class="move">前往迦南島，車程約 30 分鐘</div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="dot">🛶</div>
+    <div class="time">午後｜迦南島</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#d7ead9"/>
+          <rect x="0" y="66" width="400" height="46" fill="#3f8a7c"/>
+          <path d="M0 74 Q50 69 100 74 T200 74 T300 74 T400 74" stroke="#9fd4c2" stroke-width="2" fill="none" opacity=".7"/>
+          <!-- water coconut palms -->
+          <g transform="translate(60,20)"><path d="M0 46 Q4 20 2 0" stroke="#5c8a4a" stroke-width="5" fill="none"/><path d="M2 0 Q-18 -10 -30 -2 Q-14 2 2 5Z" fill="#3a7d4f"/><path d="M2 0 Q22 -10 34 -2 Q16 2 2 5Z" fill="#3a7d4f"/></g>
+          <g transform="translate(330,16)"><path d="M0 50 Q4 22 2 0" stroke="#5c8a4a" stroke-width="5" fill="none"/><path d="M2 0 Q-18 -10 -30 -2 Q-14 2 2 5Z" fill="#3a7d4f"/><path d="M2 0 Q22 -10 34 -2 Q16 2 2 5Z" fill="#3a7d4f"/></g>
+          <!-- basket boat -->
+          <g transform="translate(200,66)">
+            <ellipse cx="0" cy="10" rx="34" ry="13" fill="#b98a4a"/>
+            <ellipse cx="0" cy="7" rx="28" ry="9" fill="#8a5f2e"/>
+            <circle cx="-8" cy="-2" r="6" fill="#f6d9b0"/>
+            <path d="M-8 4 L-8 14" stroke="#f6d9b0" stroke-width="4"/>
+            <path d="M-14 -8 Q-8 -14 -2 -8" fill="#3a7d4f"/>
+            <line x1="8" y1="-6" x2="24" y2="12" stroke="#8a5f2e" stroke-width="3"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>迦南島椰林・竹桶船 <span class="tag">水上體驗</span></h2>
+        <p>會安對岸的原始水鄉，兩人一艘竹桶船（筲箕船）鑽進水椰林，船伕還會現場表演「旋轉船」絕技和椰葉編織。中午在島上吃農家料理（含飲品一杯）。</p>
+        <ul>
+          <li>船家小費建議每人約2萬越盾，先備好零錢</li>
+          <li>行進間勿站立、勿換位，全程穿救生衣</li>
+          <li>2歲以下兒童基於安全無法參加</li>
+        </ul>
+      </div>
+      <div class="move">前往會安古鎮，車程約 15 分鐘</div>
+    </div>
+  </div>
+
+  <div class="stop evening">
+    <div class="dot">🏮</div>
+    <div class="time">傍晚–晚間｜會安</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#3f3a5c"/>
+          <circle cx="340" cy="20" r="10" fill="#fdf3d8"/>
+          <rect x="30" y="44" width="70" height="46" fill="#e0b64f"/>
+          <path d="M24 44 L65 24 L106 44 Z" fill="#8a4a2e"/>
+          <rect x="48" y="62" width="14" height="18" fill="#5c3a20"/>
+          <rect x="112" y="52" width="60" height="38" fill="#d9a83e"/>
+          <path d="M106 52 L142 32 L178 52 Z" fill="#8a4a2e"/>
+          <rect x="128" y="66" width="12" height="16" fill="#7a4a26"/>
+          <path d="M20 20 Q200 -2 380 26" stroke="#8a96c8" stroke-width="1.6" fill="none"/>
+          <ellipse cx="90" cy="22" rx="8" ry="10" fill="#e4572e"/>
+          <ellipse cx="170" cy="14" rx="8" ry="10" fill="#f2b25c"/>
+          <ellipse cx="250" cy="18" rx="8" ry="10" fill="#d94f7e"/>
+          <ellipse cx="320" cy="24" rx="8" ry="10" fill="#4fa3d9"/>
+          <rect x="0" y="90" width="400" height="22" fill="#28536b"/>
+          <path d="M0 96 Q50 92 100 96 T200 96 T300 96 T400 96" stroke="#7fb2c9" stroke-width="2" fill="none" opacity=".5"/>
+          <circle cx="230" cy="100" r="3.6" fill="#f2b25c"/><circle cx="264" cy="104" r="3" fill="#e4572e"/><circle cx="300" cy="100" r="3.2" fill="#f2b25c"/>
+          <!-- covered bridge -->
+          <g transform="translate(196,58)">
+            <rect x="0" y="14" width="80" height="10" fill="#8a5f2e"/>
+            <rect x="10" y="0" width="60" height="16" fill="#b3543a"/>
+            <path d="M6 0 L40 -12 L74 0 Z" fill="#7a3626"/>
+            <rect x="0" y="24" width="8" height="10" fill="#6f4a26"/><rect x="72" y="24" width="8" height="10" fill="#6f4a26"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>會安古鎮漫遊 <span class="tag">世界文化遺產</span></h2>
+        <div class="rating">★ 4.3（2.8萬+ 評價，日本橋）</div>
+        <p>活生生的歷史博物館：鵝黃色老屋、日本橋、滿街手工燈籠，入夜點燈後整個古鎮像浸在暖光裡。晚餐吃古鎮風味餐（含飲品一杯），飯後在秋盆江畔放水燈祈福。</p>
+        <ul>
+          <li>傍晚點燈前先逛街拍黃牆，點燈後拍燈籠街和河面倒影</li>
+          <li>放水燈記得許願；江邊人多顧好隨身物品</li>
+          <li>白玫瑰、高樓麵（Cao lầu）是會安名物，有機會嚐嚐</li>
+        </ul>
+      </div>
+      <div class="move">返回峴港市區飯店，車程約 45 分鐘——明天整天自由活動，好好期待！</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================== DAY 4 ================================================== -->
+<div class="late">
+<h2 class="sec-title" id="day4">DAY 4<span class="d-date">｜9/25（五）</span>★ 全日自由活動</h2>
+<p class="sec-sub">飯店早餐吃飽 → 10:30 出門｜全天冷氣友善・遊船看噴火秀零折返</p>
+<div class="meals"><span>早：飯店</span><span>午：自理（Vincom）</span><span>晚：自理（龍蝦吃到飽！）</span></div>
+</div>
+
+<section class="timeline tl-night">
 
   <!-- Vincom -->
   <div class="stop">
     <div class="dot">🛍️</div>
     <div class="time">11:00 – 13:15</div>
     <div class="card">
-      <h2>Vincom Plaza <span class="tag">午餐＋購物</span></h2>
-      <div class="rating">★ 4.2（1.4萬+ 評價）｜10:00–22:00</div>
-      <p>頂樓美食街解決午餐，WinMart 超市掃伴手禮：G7咖啡、腰果、椰子糖、零食通通有，比機場便宜一大截。還有 H&amp;M、Nike、Adidas 可以逛，全程冷氣超舒服。少了下個趕場行程，可以慢慢逛到 13:15。</p>
-      <ul>
-        <li>伴手禮先買放車上或請飯店寄放，晚上行程就不用提著跑</li>
-        <li>WinMart 在2樓，美食街在頂樓，由上往下逛最順</li>
-      </ul>
-      <div class="links"><a class="btn" href="https://maps.google.com/?cid=7818750409929595867" target="_blank">Google 地圖</a></div>
-      <div class="move">下一站車程約 8 分鐘</div>
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#e9f4ee"/>
+          <rect x="60" y="28" width="280" height="84" rx="8" fill="#7fc0b4"/>
+          <rect x="60" y="28" width="280" height="17" fill="#0e6f7c"/>
+          <text x="200" y="41" text-anchor="middle" font-family="Noto Sans TC" font-size="10.5" font-weight="700" fill="#fdfcf9" letter-spacing="3">VINCOM PLAZA</text>
+          <rect x="80" y="56" width="32" height="40" rx="3" fill="#e9f4ee"/>
+          <rect x="124" y="56" width="32" height="40" rx="3" fill="#e9f4ee"/>
+          <rect x="244" y="56" width="32" height="40" rx="3" fill="#e9f4ee"/>
+          <rect x="288" y="56" width="32" height="40" rx="3" fill="#e9f4ee"/>
+          <rect x="178" y="54" width="44" height="58" rx="4" fill="#f2b25c"/>
+          <rect x="197" y="78" width="6" height="12" rx="3" fill="#8a5f2e"/>
+          <g transform="translate(20,70)"><rect x="0" y="6" width="22" height="26" rx="3" fill="#e4572e"/><path d="M5 6 Q11 -6 17 6" stroke="#c8431f" stroke-width="3" fill="none"/></g>
+          <g transform="translate(354,68)"><rect x="0" y="6" width="20" height="24" rx="3" fill="#f2b25c"/><path d="M4 6 Q10 -5 16 6" stroke="#c98d2f" stroke-width="3" fill="none"/></g>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>Vincom Plaza <span class="tag">午餐＋購物</span></h2>
+        <div class="rating">★ 4.2（1.4萬+ 評價）｜10:00–22:00</div>
+        <p>頂樓美食街解決午餐，WinMart 超市掃伴手禮：G7咖啡、腰果、椰子糖、零食通通有，比機場便宜一大截。還有 H&amp;M、Nike、Adidas 可以逛，全程冷氣超舒服。</p>
+        <ul>
+          <li>伴手禮先買，回飯店寄放，晚上行程就不用提著跑</li>
+          <li>WinMart 在2樓，美食街在頂樓，由上往下逛最順</li>
+        </ul>
+        <div class="links"><a class="btn" href="https://maps.google.com/?cid=7818750409929595867" target="_blank">Google 地圖</a></div>
+        <div class="move grab">下一站車程約 8 分鐘</div>
+      </div>
     </div>
   </div>
 
@@ -210,19 +761,39 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
     <div class="dot">💆</div>
     <div class="time">13:45 – 16:30</div>
     <div class="card">
-      <h2>Golden Lotus Oriental Organic Spa <span class="tag">下午主場</span></h2>
-      <div class="rating">★ 4.9（1.3萬+ 評價）｜Hà Bổng 63號4樓｜10:00–23:00</div>
-      <p>拿掉趕場行程後，下午整段獻給 Spa——直接上完整套：<strong>越式洗頭（含頭皮深層清潔、肩頸按摩、採耳、臉部護理）＋ 全身草本油壓 90 分鐘</strong>，加上前後茶點、沖澡、水果盤，慢慢享受約 2.5 小時，把中午最熱的時段全部躲掉。</p>
-      <ul>
-        <li>務必先預約 13:45：+84 236 6559 090（電話 / WhatsApp）</li>
-        <li>只想做洗頭套餐（60分、約250k+VAT）也行，多出的時間去美溪沙灘散步踩水</li>
-        <li>備選：Lite Retreat Spa（24h）、Queen Spa（竹筒按摩）、Luxury Herbal Spa（四手按摩）</li>
-      </ul>
-      <div class="links">
-        <a class="btn" href="https://maps.google.com/?cid=12351819386961418536" target="_blank">Google 地圖</a>
-        <a class="btn" href="https://gloospa.com/booked-appointments/" target="_blank">線上預約</a>
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#f6efe3"/>
+          <g transform="translate(200,60)">
+            <ellipse cx="0" cy="32" rx="88" ry="13" fill="#7fc0b4" opacity=".45"/>
+            <path d="M0 9 Q-13 -17 0 -32 Q13 -17 0 9Z" fill="#e4917e"/>
+            <path d="M-8 13 Q-32 -8 -25 -26 Q-6 -17 -8 13Z" fill="#ef9f8b"/>
+            <path d="M8 13 Q32 -8 25 -26 Q6 -17 8 13Z" fill="#ef9f8b"/>
+            <path d="M-15 17 Q-45 6 -43 -11 Q-17 -8 -15 17Z" fill="#f6b8a0"/>
+            <path d="M15 17 Q45 6 43 -11 Q17 -8 15 17Z" fill="#f6b8a0"/>
+            <circle cx="0" cy="7" r="6.5" fill="#f2b25c"/>
+          </g>
+          <path d="M92 58 q-8 -11 0 -21 q8 -9 0 -19" stroke="#c9a86a" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>
+          <path d="M310 62 q-8 -11 0 -21 q8 -9 0 -19" stroke="#c9a86a" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>
+          <circle cx="60" cy="28" r="4" fill="#e4917e" opacity=".6"/>
+          <circle cx="344" cy="32" r="4" fill="#e4917e" opacity=".6"/>
+        </svg>
       </div>
-      <div class="move">按完先回飯店放戰利品、換晚上的衣服，再出發吃晚餐（各約 5–10 分鐘）</div>
+      <div class="card-inner">
+        <h2>Golden Lotus Oriental Organic Spa <span class="tag">下午主場</span></h2>
+        <div class="rating">★ 4.9（1.3萬+ 評價）｜Hà Bổng 63號4樓｜10:00–23:00</div>
+        <p>下午整段獻給 Spa——直接上完整套：<strong>越式洗頭（含頭皮深層清潔、肩頸按摩、採耳、臉部護理）＋ 全身草本油壓 90 分鐘</strong>，加上前後茶點、沖澡、水果盤，慢慢享受約 2.5 小時，把最熱時段全部躲掉。</p>
+        <ul>
+          <li>務必先預約 13:45：+84 236 6559 090（電話 / WhatsApp）</li>
+          <li>只做洗頭套餐（60分、約250k+VAT）也行，多的時間去美溪沙灘散步</li>
+          <li>備選：Lite Retreat Spa（24h）、Queen Spa（竹筒按摩）、Luxury Herbal Spa（四手按摩）</li>
+        </ul>
+        <div class="links">
+          <a class="btn" href="https://maps.google.com/?cid=12351819386961418536" target="_blank">Google 地圖</a>
+          <a class="btn" href="https://gloospa.com/booked-appointments/" target="_blank">線上預約</a>
+        </div>
+        <div class="move grab">按完先回飯店放東西、換晚上的衣服，再出發吃晚餐（各約 5–10 分鐘）</div>
+      </div>
     </div>
   </div>
 
@@ -231,25 +802,47 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
     <div class="dot">🦞</div>
     <div class="time">17:30 – 19:30</div>
     <div class="card">
-      <h2>All Seasons Buffet <span class="tag">本日主秀</span></h2>
-      <div class="rating">★ 4.9（5,200+ 評價）｜193 Nguyễn Văn Thoại｜晚餐 17:00–22:00</div>
-      <p>峴港第一家龍蝦吃到飽，60+ 道料理現點現做、桌邊服務。<strong>一入座直接點滿三種口味龍蝦</strong>：奶油焗烤、蒜味、會安辣椒醬，服務人員還會幫忙剝殼。19:30 準時收尾，晚上還有遊船行程！</p>
-      <div class="menu">
-        <span>龍蝦無限續點＋海鮮單點吃到飽</span><span class="price">1,550k</span>
-        <span>龍蝦一隻＋海鮮吃到飽</span><span class="price">1,050k</span>
-        <span>龍蝦半隻＋海鮮吃到飽</span><span class="price">850k</span>
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#f8e3c8"/>
+          <ellipse cx="200" cy="92" rx="128" ry="16" fill="#fdfcf9"/>
+          <ellipse cx="200" cy="88" rx="116" ry="12" fill="#f6d9b0"/>
+          <g transform="translate(200,52)">
+            <ellipse cx="0" cy="12" rx="25" ry="29" fill="#e4572e"/>
+            <path d="M-10 -13 Q-33 -38 -50 -27 Q-37 -19 -31 -6 Q-19 -13 -10 -13Z" fill="#e4572e"/>
+            <path d="M10 -13 Q33 -38 50 -27 Q37 -19 31 -6 Q19 -13 10 -13Z" fill="#e4572e"/>
+            <path d="M0 40 L-11 57 L0 51 L11 57 Z" fill="#c8431f"/>
+            <circle cx="-8" cy="0" r="3" fill="#131c33"/><circle cx="8" cy="0" r="3" fill="#131c33"/>
+            <path d="M-21 12 L-42 6 M-21 21 L-42 21 M21 12 L42 6 M21 21 L42 21" stroke="#c8431f" stroke-width="4" stroke-linecap="round"/>
+            <path d="M-9 8 Q0 15 9 8" stroke="#c8431f" stroke-width="2" fill="none"/>
+          </g>
+          <circle cx="96" cy="84" r="10" fill="#f2d25c"/><circle cx="96" cy="84" r="7" fill="#f8e88f"/>
+          <circle cx="304" cy="84" r="10" fill="#f2d25c"/><circle cx="304" cy="84" r="7" fill="#f8e88f"/>
+          <path d="M160 30 q-6 -10 0 -18" stroke="#b06a55" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
+          <path d="M244 30 q6 -10 0 -18" stroke="#b06a55" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
+        </svg>
       </div>
-      <ul>
-        <li>自行訂位稅費另計約13%；KKday / Klook 先買券通常已含稅費更划算</li>
-        <li>務必提前訂位 17:30：+84 764 068 111（電話 / WhatsApp）</li>
-        <li>蘑菇濃湯、英式海鮮烤牛肉組合是隱藏必點</li>
-        <li>吃到飽策略：龍蝦先上、主食甜點最後，19:15 開始收心準備出發</li>
-      </ul>
-      <div class="links">
-        <a class="btn hot" href="https://maps.google.com/?cid=9979023555170342361" target="_blank">Google 地圖</a>
-        <a class="btn hot" href="https://www.allseasonsbuffet.com/" target="_blank">官方網站</a>
+      <div class="card-inner">
+        <h2>All Seasons Buffet <span class="tag">本日主秀</span></h2>
+        <div class="rating">★ 4.9（5,200+ 評價）｜193 Nguyễn Văn Thoại｜晚餐 17:00–22:00</div>
+        <p>峴港第一家龍蝦吃到飽，60+ 道料理現點現做、桌邊服務。<strong>一入座直接點滿三種口味龍蝦</strong>：奶油焗烤、蒜味、會安辣椒醬，服務人員還會幫忙剝殼。19:30 準時收尾，晚上還有遊船行程！</p>
+        <div class="menu">
+          <span>龍蝦無限續點＋海鮮單點吃到飽</span><span class="price">1,550k</span>
+          <span>龍蝦一隻＋海鮮吃到飽</span><span class="price">1,050k</span>
+          <span>龍蝦半隻＋海鮮吃到飽</span><span class="price">850k</span>
+        </div>
+        <ul>
+          <li>自行訂位稅費另計約13%；KKday / Klook 先買券通常已含稅費更划算</li>
+          <li>務必提前訂位 17:30：+84 764 068 111（電話 / WhatsApp）</li>
+          <li>蘑菇濃湯、英式海鮮烤牛肉組合是隱藏必點</li>
+          <li>吃到飽策略：龍蝦先上、主食甜點最後，19:15 開始收心準備出發</li>
+        </ul>
+        <div class="links">
+          <a class="btn hot" href="https://maps.google.com/?cid=9979023555170342361" target="_blank">Google 地圖</a>
+          <a class="btn hot" href="https://www.allseasonsbuffet.com/" target="_blank">官方網站</a>
+        </div>
+        <div class="move grab">19:40 搭 Grab 過橋到韓江碼頭，車程約 10 分鐘</div>
       </div>
-      <div class="move">19:40 搭 Grab 過橋到韓江碼頭，車程約 10 分鐘</div>
     </div>
   </div>
 
@@ -258,19 +851,44 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
     <div class="dot">🚢</div>
     <div class="time">20:00 報到｜20:15 – 21:15 出航</div>
     <div class="card">
-      <h2>My Xuan 韓江夜遊船 <span class="tag">船上看噴火秀</span></h2>
-      <div class="rating">★ 4.5（Klook 2,800+ 評價）｜航程 45 分鐘｜NT$90 起</div>
-      <p>飯後甜點是整條韓江的夜景。訂 <strong>20:15 船班</strong>，沿途看愛情橋心形燈飾、鯉魚化龍雕像、太陽摩天輪燈光，船上有音樂表演、附水果和水——最重要的是 <strong>21:00 龍橋噴火噴水秀直接在船上看</strong>，視野最好、不用人擠人卡位、也不會被水噴到。</p>
-      <ul>
-        <li>Klook 預訂「美軒遊船船票」，可加購無限暢飲（汽水＋啤酒）配夜景</li>
-        <li>訂完用 WhatsApp 跟主辦確認登船碼頭：+84 938 485 438</li>
-        <li>9/25 非國定假日，不用付附加費；江風偏涼可帶薄外套</li>
-      </ul>
-      <div class="links">
-        <a class="btn" href="https://www.klook.com/zh-TW/activity/23321-han-river-cruise-my-xuan-cruise-da-nang/" target="_blank">Klook 訂票</a>
-        <a class="btn" href="https://maps.google.com/?cid=329807663884316974" target="_blank">龍橋位置</a>
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#131c33"/>
+          <circle cx="60" cy="24" r="12" fill="#fdf3d8"/>
+          <circle cx="120" cy="14" r="1.6" fill="#fdf3d8"/><circle cx="180" cy="22" r="1.4" fill="#fdf3d8"/><circle cx="250" cy="10" r="1.6" fill="#fdf3d8"/><circle cx="330" cy="18" r="1.4" fill="#fdf3d8"/>
+          <path d="M110 60 Q170 28 230 52 Q290 72 350 46" stroke="#f2b25c" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="352" cy="45" r="8" fill="#f2b25c"/>
+          <path d="M360 42 L392 30 L376 48 L396 46 L366 54 Z" fill="#e4572e"/>
+          <rect x="0" y="76" width="400" height="36" fill="#1d2f4e"/>
+          <path d="M0 86 Q50 81 100 86 T200 86 T300 86 T400 86" stroke="#5a68a0" stroke-width="2" fill="none" opacity=".7"/>
+          <g transform="translate(150,68)">
+            <path d="M0 22 L96 22 L84 38 L12 38 Z" fill="#2c3e66"/>
+            <rect x="14" y="8" width="66" height="14" rx="4" fill="#3d5280"/>
+            <rect x="20" y="11" width="8" height="7" rx="1.5" fill="#fdf3d8"/>
+            <rect x="34" y="11" width="8" height="7" rx="1.5" fill="#fdf3d8"/>
+            <rect x="48" y="11" width="8" height="7" rx="1.5" fill="#fdf3d8"/>
+            <rect x="62" y="11" width="8" height="7" rx="1.5" fill="#fdf3d8"/>
+            <path d="M14 8 L26 -4 L70 -4 L80 8 Z" fill="#e4572e"/>
+            <circle cx="48" cy="-8" r="3" fill="#f2b25c"/>
+          </g>
+        </svg>
       </div>
-      <div class="move">下船後搭 Grab 回美溪沙灘，車程約 10 分鐘</div>
+      <div class="card-inner">
+        <h2>My Xuan 韓江夜遊船 <span class="tag">船上看噴火秀</span></h2>
+        <div class="rating">★ 4.5（Klook 2,800+ 評價）｜航程 45 分鐘｜NT$90 起</div>
+        <p>飯後甜點是整條韓江的夜景。訂 <strong>20:15 船班</strong>，沿途看愛情橋心形燈飾、鯉魚化龍雕像、太陽摩天輪燈光，船上有音樂表演、附水果和水——最重要的是 <strong>21:00 龍橋噴火噴水秀直接在船上看</strong>，視野最好、不用人擠人卡位、也不會被水噴到。</p>
+        <ul>
+          <li>Klook 預訂「美軒遊船船票」，可加購無限暢飲（汽水＋啤酒）配夜景</li>
+          <li>訂完用 WhatsApp 跟主辦確認登船碼頭：+84 938 485 438</li>
+          <li>9/25 非國定假日，不用付附加費；江風偏涼可帶薄外套</li>
+          <li>💰 團方自費「峴港深度一日遊」NT$2,800 也含這艘遊船——自己訂只要 NT$90，行程還完全客製！</li>
+        </ul>
+        <div class="links">
+          <a class="btn" href="https://www.klook.com/zh-TW/activity/23321-han-river-cruise-my-xuan-cruise-da-nang/" target="_blank">Klook 訂票</a>
+          <a class="btn" href="https://maps.google.com/?cid=329807663884316974" target="_blank">龍橋位置</a>
+        </div>
+        <div class="move grab">下船後搭 Grab 回美溪沙灘，車程約 10 分鐘</div>
+      </div>
     </div>
   </div>
 
@@ -279,14 +897,95 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
     <div class="dot">🎶</div>
     <div class="time">21:45 – 盡興為止</div>
     <div class="card">
-      <h2>Esco Beach Bar <span class="tag">海灘微醺收尾</span></h2>
-      <div class="rating">★ 4.6（7,200+ 評價）｜美溪沙灘正對面｜營業至 24:00</div>
-      <p>看完噴火秀回沙灘這側，吹著海風喝一杯完美收尾。Esco 有現場樂團、薩克斯風、DJ 和火舞表演，晚上氣氛正好。</p>
-      <ul>
-        <li>想喝晚一點：Malibu Beach Club（★4.8）開到凌晨 2 點</li>
-        <li>想更 chill：隔壁 Lounge Beach Bar（★4.8）價位更親民，開到凌晨 1 點</li>
-      </ul>
-      <div class="links"><a class="btn" href="https://maps.google.com/?cid=3113794275195289540" target="_blank">Google 地圖</a></div>
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#1a2440"/>
+          <circle cx="330" cy="24" r="13" fill="#fdf3d8"/>
+          <circle cx="330" cy="24" r="19" fill="#fdf3d8" opacity=".15"/>
+          <circle cx="60" cy="16" r="1.6" fill="#fdf3d8"/><circle cx="140" cy="10" r="1.4" fill="#fdf3d8"/><circle cx="220" cy="18" r="1.6" fill="#fdf3d8"/>
+          <rect x="0" y="72" width="400" height="40" fill="#0e4a5c"/>
+          <path d="M0 80 Q50 75 100 80 T200 80 T300 80 T400 80" stroke="#7fb2c9" stroke-width="2" fill="none" opacity=".5"/>
+          <path d="M0 90 Q120 70 260 94 L260 112 L0 112 Z" fill="#d9b98a"/>
+          <g transform="translate(58,38)">
+            <path d="M0 54 Q6 27 2 0" stroke="#7a5230" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M2 0 Q-23 -12 -38 0 Q-19 2 2 6Z" fill="#2f7d6d"/>
+            <path d="M2 0 Q27 -14 42 -2 Q21 2 2 6Z" fill="#2f7d6d"/>
+            <path d="M2 0 Q-8 -25 -25 -29 Q-8 -12 2 4Z" fill="#3a9480"/>
+            <path d="M2 0 Q13 -25 30 -27 Q11 -10 2 4Z" fill="#3a9480"/>
+          </g>
+          <g transform="translate(180,60)">
+            <rect x="-3" y="17" width="6" height="23" fill="#8a5f2e"/>
+            <ellipse cx="0" cy="17" rx="29" ry="7" fill="#a9743c"/>
+            <path d="M-17 6 L-4 6 L-10.5 14 Z" fill="#f6b8a0"/>
+            <rect x="-11.3" y="14" width="1.6" height="6" fill="#fdf3d8"/>
+            <circle cx="-5" cy="3" r="2.6" fill="#e4572e"/>
+            <path d="M13 2 L21 2 L20 15 L14 15 Z" fill="#f2b25c"/>
+          </g>
+          <g fill="#f2b25c">
+            <circle cx="238" cy="44" r="4"/><rect x="241" y="24" width="2.4" height="20"/>
+            <circle cx="262" cy="36" r="4"/><rect x="265" y="16" width="2.4" height="20"/><path d="M243 24 L268 16 L268 22 L243 30 Z"/>
+          </g>
+          <circle cx="120" cy="56" r="5" fill="#e4572e"/><circle cx="120" cy="56" r="9" fill="#e4572e" opacity=".3"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>Esco Beach Bar <span class="tag">海灘微醺收尾</span></h2>
+        <div class="rating">★ 4.6（7,200+ 評價）｜美溪沙灘正對面｜營業至 24:00</div>
+        <p>看完噴火秀回沙灘這側，吹著海風喝一杯完美收尾。Esco 有現場樂團、薩克斯風、DJ 和火舞表演，晚上氣氛正好。</p>
+        <ul>
+          <li>想喝晚一點：Malibu Beach Club（★4.8）開到凌晨 2 點</li>
+          <li>想更 chill：隔壁 Lounge Beach Bar（★4.8）價位更親民，開到凌晨 1 點</li>
+        </ul>
+        <div class="links"><a class="btn" href="https://maps.google.com/?cid=3113794275195289540" target="_blank">Google 地圖</a></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================== DAY 5 ================================================== -->
+<div class="late">
+<h2 class="sec-title" id="day5">DAY 5<span class="d-date">｜9/26（六）</span>峴港 ✈ 桃園</h2>
+<p class="sec-sub">滿載而歸，回家！</p>
+<div class="meals"><span>早：飯店</span><span>午：機上簡餐</span><span>晚：溫暖的家</span></div>
+</div>
+
+<section class="timeline tl-night">
+
+  <div class="stop night">
+    <div class="dot">🧳</div>
+    <div class="time">上午｜退房 → 峴港國際機場</div>
+    <div class="card">
+      <div class="card-art">
+        <svg viewBox="0 0 400 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="112" fill="#26304f"/>
+          <circle cx="70" cy="26" r="12" fill="#f2b25c"/>
+          <path d="M0 84 Q100 72 200 82 T400 78 L400 112 L0 112 Z" fill="#3d5280"/>
+          <g transform="translate(120,44)">
+            <rect x="0" y="10" width="46" height="36" rx="6" fill="#e4572e"/>
+            <rect x="15" y="0" width="16" height="12" rx="4" fill="none" stroke="#c8431f" stroke-width="4"/>
+            <rect x="8" y="10" width="5" height="36" fill="#c8431f"/>
+            <rect x="33" y="10" width="5" height="36" fill="#c8431f"/>
+            <circle cx="9" cy="50" r="4" fill="#131c33"/><circle cx="37" cy="50" r="4" fill="#131c33"/>
+          </g>
+          <g transform="translate(220,30) rotate(-22)">
+            <ellipse cx="24" cy="9" rx="27" ry="7" fill="#fdfcf9"/>
+            <path d="M22 4 L9 -11 L17 -11 L32 4 Z" fill="#fdfcf9"/>
+            <path d="M22 14 L12 26 L19 26 L32 14 Z" fill="#fdfcf9"/>
+            <path d="M47 6 L57 1 L54 10 Z" fill="#e4572e"/>
+          </g>
+          <path d="M300 66 q8 -8 16 0" stroke="#8a96c8" stroke-width="3" fill="none" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="card-inner">
+        <h2>華航直飛返台 <span class="tag">回程</span></h2>
+        <p>飯店早餐後整理行囊，依航班時間前往峴港國際機場，華航直飛回桃園（午餐機上簡餐）。帶著曬痕、伴手禮和滿滿的照片回家！</p>
+        <ul>
+          <li>越盾記得花完或機場換回；魚露等液體超過100ml要托運</li>
+          <li>昨晚沒買齊的伴手禮，機場可最後補貨（價格較高）</li>
+          <li>退房前檢查保險箱、充電器、浴室備品夾層</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -296,20 +995,22 @@ footer .wave{font-size:18px;letter-spacing:.3em;color:#f2b25c}
 <div class="panel">
   <h3>✅ 出發前備忘</h3>
   <table>
-    <tr><td>📞 All Seasons 訂位（17:30、報人數）</td><td>+84 764 068 111</td></tr>
-    <tr><td>📞 Golden Lotus Spa 預約（13:45）</td><td>+84 236 6559 090</td></tr>
-    <tr><td>🚢 Klook 訂遊船（20:15 船班）＋ WhatsApp 確認碼頭</td><td>+84 938 485 438</td></tr>
+    <tr><td>📞 All Seasons 訂位（9/25・17:30、報人數）</td><td>+84 764 068 111</td></tr>
+    <tr><td>📞 Golden Lotus Spa 預約（9/25・13:45）</td><td>+84 236 6559 090</td></tr>
+    <tr><td>🚢 Klook 訂遊船（9/25・20:15 船班）＋ WhatsApp 確認碼頭</td><td>+84 938 485 438</td></tr>
     <tr><td>🎫 KKday / Klook 買龍蝦餐券（含稅較划算）</td><td>出發前3天</td></tr>
     <tr><td>💵 換好越盾現金（小費、雜支用）</td><td>建議 2,000k+</td></tr>
+    <tr><td>💵 竹桶船小費每人約2萬越盾（D3用）</td><td>備零錢</td></tr>
+    <tr><td>👗 D3寺廟服裝：過膝褲裙、不露肩肚</td><td>先放行李箱</td></tr>
+    <tr><td>🧥 薄外套（D2巴拿山溫差6–12度、D4遊船江風）</td><td>必帶</td></tr>
     <tr><td>📱 下載 Grab App＋綁定付款</td><td>必備</td></tr>
-    <tr><td>🧥 帶件薄外套（遊船江風偏涼）</td><td>小提醒</td></tr>
   </table>
 </div>
 
 <footer>
   <div class="wave">〜〜〜</div>
-  Đà Nẵng · Han River · My Khe Beach · 2026.09.25<br>
-  吃好吃滿・玩好玩滿・平安順心
+  Đà Nẵng · Bà Nà Hills · Hội An · Han River · My Khe Beach<br>
+  2026.09.22 – 09.26 · 吃好吃滿・玩好玩滿・平安順心
 </footer>
 
 </div>
